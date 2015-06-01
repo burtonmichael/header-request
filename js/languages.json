@@ -1,0 +1,258 @@
+[{
+	"id": "521",
+	"preflang": "us",
+	"locale": "en_usa",
+	"name": "American"
+},
+{
+	"id": "441",
+	"preflang": "ar",
+	"locale": "ar_ae",
+	"name": "Arabic"
+},
+{
+	"id": "536",
+	"preflang": "br",
+	"locale": "pt_rc_br",
+	"name": "Brazilian"
+},
+{
+	"id": "6136",
+	"preflang": "bg",
+	"locale": "bg",
+	"name": "Bulgarian"
+},
+{
+	"id": "7486",
+	"preflang": "ca",
+	"locale": "cn",
+	"name": "Canadian"
+},
+{
+	"id": "516",
+	"preflang": "ca",
+	"locale": "ca",
+	"name": "Catalonian"
+},
+{
+	"id": "526",
+	"preflang": "zs",
+	"locale": "zh_hk_simp",
+	"name": "Chinese - Simplified"
+},
+{
+	"id": "466",
+	"preflang": "zh",
+	"locale": "zh_hk_trad",
+	"name": "Chinese - Traditional"
+},
+{
+	"id": "1266",
+	"preflang": "hr",
+	"locale": "hr",
+	"name": "Croatian"
+},
+{
+	"id": "486",
+	"preflang": "cs",
+	"locale": "cs",
+	"name": "Czech"
+},
+{
+	"id": "421",
+	"preflang": "da",
+	"locale": "da",
+	"name": "Danish"
+},
+{
+	"id": "401",
+	"preflang": "nl",
+	"locale": "nl",
+	"name": "Dutch"
+},
+{
+	"id": "361",
+	"preflang": "en",
+	"locale": "en",
+	"name": "English"
+},
+{
+	"id": "1261",
+	"preflang": "ee",
+	"locale": "ee",
+	"name": "Estonian"
+},
+{
+	"id": "2046",
+	"preflang": "ph",
+	"locale": "ph",
+	"name": "Filipino"
+},
+{
+	"id": "411",
+	"preflang": "fi",
+	"locale": "fi",
+	"name": "Finnish"
+},
+{
+	"id": "371",
+	"preflang": "fr",
+	"locale": "fr",
+	"name": "French"
+},
+{
+	"id": "366",
+	"preflang": "de",
+	"locale": "de",
+	"name": "German"
+},
+{
+	"id": "491",
+	"preflang": "gr",
+	"locale": "el",
+	"name": "Greek"
+},
+{
+	"id": "446",
+	"preflang": "he",
+	"locale": "he_il",
+	"name": "Hebrew"
+},
+{
+	"id": "496",
+	"preflang": "hu",
+	"locale": "hu",
+	"name": "Hungarian"
+},
+{
+	"id": "381",
+	"preflang": "is",
+	"locale": "is",
+	"name": "Icelandic"
+},
+{
+	"id": "2506",
+	"preflang": "id",
+	"locale": "in_id",
+	"name": "Indonesian"
+},
+{
+	"id": "431",
+	"preflang": "it",
+	"locale": "it",
+	"name": "Italian"
+},
+{
+	"id": "451",
+	"preflang": "jp",
+	"locale": "ja_jp",
+	"name": "Japanese"
+},
+{
+	"id": "456",
+	"preflang": "ko",
+	"locale": "kr_ko",
+	"name": "Korean"
+},
+{
+	"id": "386",
+	"preflang": "lv",
+	"locale": "lv",
+	"name": "Latvian"
+},
+{
+	"id": "406",
+	"preflang": "lt",
+	"locale": "lt",
+	"name": "Lithuanian"
+},
+{
+	"id": "551",
+	"preflang": "my",
+	"locale": "my",
+	"name": "Malaysian"
+},
+{
+	"id": "426",
+	"preflang": "no",
+	"locale": "no",
+	"name": "Norwegian"
+},
+{
+	"id": "501",
+	"preflang": "pl",
+	"locale": "pl",
+	"name": "Polish"
+},
+{
+	"id": "396",
+	"preflang": "pt",
+	"locale": "pt",
+	"name": "Portuguese"
+},
+{
+	"id": "506",
+	"preflang": "ro",
+	"locale": "ro",
+	"name": "Romanian"
+},
+{
+	"id": "511",
+	"preflang": "ru",
+	"locale": "ru",
+	"name": "Russian"
+},
+{
+	"id": "1276",
+	"preflang": "rs",
+	"locale": "rs",
+	"name": "Serbian"
+},
+{
+	"id": "436",
+	"preflang": "sk",
+	"locale": "sk",
+	"name": "Slovakian"
+},
+{
+	"id": "708",
+	"preflang": "sl",
+	"locale": "sl",
+	"name": "Slovenian"
+},
+{
+	"id": "391",
+	"preflang": "es",
+	"locale": "es",
+	"name": "Spanish"
+},
+{
+	"id": "416",
+	"preflang": "sv",
+	"locale": "sv",
+	"name": "Swedish"
+},
+{
+	"id": "376",
+	"preflang": "th",
+	"locale": "th",
+	"name": "Thai"
+},
+{
+	"id": "476",
+	"preflang": "tr",
+	"locale": "tr",
+	"name": "Turkish"
+},
+{
+	"id": "796",
+	"preflang": "uk",
+	"locale": "uk",
+	"name": "Ukrainian"
+},
+{
+	"id": "1336",
+	"preflang": "vi",
+	"locale": "vi",
+	"name": "Vietnamese"
+}]

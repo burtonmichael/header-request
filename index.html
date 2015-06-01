@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.4/css/bootstrap.min.css">
+    <style>
+        select[multiple],
+        select[size] {
+            height: 12em;
+        }
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+        pre {
+            padding: 0;
+            font-size: 13px;
+            line-height: 1.42857143;
+            color: #333;
+            background-color: transparent;
+            border: 0 solid #CCC;
+            border-radius: 0;
+        }
+    </style>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="mainCtrl" class="container" ng-cloak>
+        <div ng-show="!generated" class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>
+                    Header Setup
+                </h2>
+                <p class="lead">
+                    Enter the details of the header / footer required.
+                </p>
+                <div class="well">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Affiliate code</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" ng-model="main.affiliateCode">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Locale suffix</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" ng-model="main.locale">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <label>Languages</label> <em><small>Hold <kbd>CTRL</kbd> to select multiple languages.</small></em>
+                                <select ng-options="language.name for language in languages" multiple ng-model="main.selected" class="form-control">
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <div class="checkbox col-sm-12">
+                                <label>
+                                    <input ng-model="header.selected" type="checkbox" value="">
+                                    <strong>Include header?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div ng-show="header.selected" ng-repeat="language in main.selected" class="form-group">
+                            <div class="col-sm-12">
+                                <label>{{language.name}}</label>
+                                <textarea ng-model="language.markup.header" class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="form-group">
+                            <div class="checkbox col-sm-12">
+                                <label>
+                                    <input ng-model="footer.selected" type="checkbox" value="">
+                                    <strong>Include footer?</strong>
+                                </label>
+                            </div>
+                        </div>
+                        <div ng-show="footer.selected" ng-repeat="language in main.selected" class="form-group">
+                            <div class="col-sm-12">
+                                <label>{{language.name}}</label>
+                                <textarea ng-model="language.markup.footer" class="form-control" rows="2"></textarea>
+                            </div>
+                        </div>
+                        <hr>
+                        <div ng-show="main.affiliateCode && main.locale && main.selected && (header.selected || footer.selected)">
+                            <button class="btn btn-primary" ng-click="generate()">Generate</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div ng-if="generated" class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>
+                    Generated
+                </h2>
+                <p class="lead">
+                    Use this.
+                </p>
+<pre>
+<div ng-repeat="language in main.selected">
+<h3>{{language.name}}</h3>
+<strong>LOCALE</strong>
+{{language.locale}}_{{main.locale}}
+
+<strong>LANGUAGE CODE</strong>
+{{language.id}}
+
+<div ng-if="header.selected"><strong>HEADER MARKUP</strong>
+{{language.markup.header}}
+
+<strong>HEADER TILE</strong>
+&lt;definition name=".ResponsiveHeader" path="/WEB-INF/templating/afftiles/{{main.affiliateCode}}/{{language.locale}}/TopNav.jsp" />
+</div>
+<div ng-if="footer.selected"><strong>FOOTER MARKUP</strong>
+{{language.markup.footer}}
+
+<strong>HEADER TILE</strong>
+&lt;definition name=".ResponsiveFooter" path="/WEB-INF/templating/afftiles/core/common/FooterBottomOverwrite.jsp">
+    &lt;put name="footer" value="/WEB-INF/templating/afftiles/{{main.affiliateCode}}/{{language.locale}}/FooterNav.jsp" />
+&lt;/definition>
+</div>
+
+
+</div>
+<strong>SYSTEM PARAMETERS</strong>
+baselanguages - assigns affiliate code to base languages
+langLocaleMapping - Assigns a locale to affiliate language
+newStyleContactUs - displays correct contact us page (set to true)
+newBrandDesign - sets correct pop Ts & Cs style (set to false)
+freeTextFieldPanel - uses drop downs instead (set to false)
+whiteLabelServer – enables brand is passed into titanium
+commissionableQuotes – enables commissionable quotes (set to true)
+geoipcheck - enables IP detection for WL with sub domains
+enableSmartPixel = false
+
+{{main}}
+</pre>
+                    <button class="btn btn-primary" ng-click="back()">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
